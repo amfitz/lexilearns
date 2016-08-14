@@ -1,9 +1,10 @@
 {% extends 'blog/base.html' %}
 
-{% block content %}
-<h1>About Alexis</h1>
-<p>
-All about me!
-</p>
+{% block title %}
+About - {{ block.super }}
+{% endblock title %}
 
-{% endblock %}
+{% block content %}
+<h1>About Me</h1>
+<p>About content.</p>
+{% endblock content %}

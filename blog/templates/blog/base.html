@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Coming+Soon|Cookie|Dancing+Script|Great+Vibes|Indie+Flower|Kaushan+Script|Lobster+Two|Marck+Script|Pacifico|Shadows+Into+Light|Tangerine|Yellowtail" rel="stylesheet">
-
-  </head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    </head>
   <body>
-    <div class="page-header">
+    <header class="container">
       {% if user.is_authenticated %}
       <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
       <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
@@ -22,10 +22,11 @@
       <nav class="col-sm-8 text-right">
          <p><a href="{% url 'blog.views.about' %}">About</a></p>
          <p><a href="{% url 'blog.views.contact' %}">Contact</a></p>
-         <p><a href="#">Contact</a></p>
-         <p><a href="#">Contact</a></p>
-       </div>
-    </div>
+         <p><a href="#">#</a></p>
+         <p><a href="#">#</a></p>
+       </nav>
+     </div>
+    </header>
 
 
    <div class="content container">
@@ -38,14 +39,17 @@
     </div>
 
 <footer class="container">
-<div class="row">
-<p class="col-sm-4">&copy LexiLearns</p>
-  <ul class="col-sm-8">
-  <li class="col-md-1">twitter</li>
-  <li class="col-md-1">github</li>
-  <li class="col-md-1">linkedin</li>
-</ul>
-</div>
+  <div class="row">
+    <p class="col-sm-4">&copy LexiLearns</p>
+      <nav class="col-sm-8 text-right">
+        <p><a href="mailto:hello@lexilearns.com?subject=Hello20%from20%the20%Blog"><i class="fa fa-envelope"></i></a></p>
+        <p><a href="http://twitter.com/AlexisMFitz" target="_blank"><i class="fa fa-twitter"></i></a></p>
+        <p><a href="http://github.com/amfitz" target="_blank"><i class="fa fa-github"></i></a></p>
+        <p><a href="http://www.linkedin.com/in/alexisfitzpatrick" target="_blank"><i class="fa fa-linkedin"></i></a></p>
+        <p><a href="#" target="_blank">#</a></p>
+        <p><a href="#" target="_blank">#</a></p>
+      </nav>
+  </div>
 </footer>
 
 
