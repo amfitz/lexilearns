@@ -9,7 +9,13 @@
           </div>
           <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
           <p>{{ post.text|linebreaks }}</p>
-          <a href="{% url 'blog.views.post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
+          <a href="{% url 'blog.views.post_detail' pk=post.pk %}">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-comment fa-stack-2x"></i>
+              <strong class="fa-stack-1x fa-stack-text fa-inverse">{{ post.approved_comments.count }}</strong>
+            </span>
+              Comments</a>
+
       </div>
   {% endfor %}
 {% endblock content %}
