@@ -8,6 +8,7 @@
 
 body {
     padding-left: 15px;
+
 }
 
 a, a:active, a:visited {
@@ -17,6 +18,8 @@ a, a:active, a:visited {
 header {
     background-color: #C390D4;
     padding: 20px 20px 20px 40px;
+    z-index: 1;
+    position: fixed;
 }
 
 header h1, header h1 a, header h1 a:visited, header h1 a:active {
@@ -26,7 +29,8 @@ header h1, header h1 a, header h1 a:visited, header h1 a:active {
 }
 
 header nav h2 a, header nav h2 a:visited, header nav h2 a:active,
-footer nav p a, footer nav p a:visited, footer nav p a:active {
+footer nav p a, footer nav p a:visited, footer nav p a:active,
+top-menu small {
     color: #ffffff;
     text-decoration: none;
     padding-left: 10px;
@@ -35,6 +39,8 @@ footer nav p a, footer nav p a:visited, footer nav p a:active {
 
 .content {
     margin-left: 40px;
+    padding-top: 100px;
+
 }
 
 h1, h2, h3, h4, nav p a {
@@ -53,6 +59,7 @@ footer {
   background-color: #C390D4;
   height: 60px;
   position: absolute;
+  clear: both;
 }
 
 footer nav {
