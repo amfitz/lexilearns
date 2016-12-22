@@ -1,25 +1,32 @@
-.container{
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+div{
+  display: block;
+}
+
+#container{
   margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px;
   width: 100%;
-}
-
-
-body {
-    padding-left: 15px;
-
+  min-height: 100%;
+  position: relative;
 }
 
 a, a:active, a:visited {
   color: #C390D4;
 }
 
-header {
+#header {
     background-color: #C390D4;
-    padding: 20px 20px 20px 40px;
+    padding: 20px ;
     z-index: 1;
     position: fixed;
+    width: 100%;
 }
 
 header h1, header h1 a, header h1 a:visited, header h1 a:active {
@@ -28,44 +35,53 @@ header h1, header h1 a, header h1 a:visited, header h1 a:active {
     text-decoration: none;
 }
 
-header nav h2 a, header nav h2 a:visited, header nav h2 a:active,
-footer nav p a, footer nav p a:visited, footer nav p a:active,
-top-menu small {
+header nav {
+  display: flex;
+  text-align: right;
+  /*justify-content: flex-end;*/
+  padding-top: 10px;
+
+}
+
+
+header nav h2 a, header nav h2 a:visited, header nav h2 a:active {
     color: #ffffff;
     text-decoration: none;
     padding-left: 10px;
     padding-right: 10px;
 }
 
-.content {
-    margin-left: 40px;
-    padding-top: 100px;
 
+
+#content {
+    margin-left: 40px;
+    padding-top: 140px;
+    padding-bottom: 40px;
 }
 
 h1, h2, h3, h4, nav p a {
   font-family: 'Kaushan Script', cursive;
 }
 
-header nav {
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 10px;
-}
 
-footer {
-  font-size: 12px;
-  padding: 20px;
+
+#footer{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height: 40px;
   background-color: #C390D4;
-  height: 60px;
-  position: absolute;
-  clear: both;
+  text-align: center;
 }
 
-footer nav {
-  display: flex;
-  justify-content: flex-end;
-  font-size: 20px;
+#social{
+  display: inline-block;
+  padding: 8px;
+  background: #ffffff;
+  border: 2px solid #C390D4;
+  border-radius: 20px;
+  color: #C390D4;
+  text-align: center;
 }
 
 
@@ -73,15 +89,12 @@ footer nav {
     color: #828282;
 }
 
-.save {
-    float: right;
-}
 
 .post-form textarea, .post-form input {
     width: 100%;
 }
 
-.top-menu, .top-menu:hover, .top-menu:visited {
+.top-menu, .top-menu:hover, .top-menu:visited, .top-menu small a{
     color: #ffffff;
     float: right;
     font-size: 26pt;

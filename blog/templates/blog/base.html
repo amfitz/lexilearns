@@ -7,50 +7,45 @@
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Coming+Soon|Cookie|Dancing+Script|Great+Vibes|Indie+Flower|Kaushan+Script|Lobster+Two|Lato|Yellowtail" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
-    </head>
+  </head>
+
   <body>
-    <header class="container">
-      {% if user.is_authenticated %}
-      <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-      <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
-      <p class="top-menu">Hello {{ user.username }}<small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
-      {% else %}
-      <a href="{ url 'login' %}" class = "top-menu"><span class = "glyphicon glyphocon-lock"></span></a>
-      {% endif %}
-      <div class="row">
-      <h1 class="col-sm-4"><a href="{% url 'blog.views.post_list' %}">Lexi Learns</a></h1>
-      <nav class="col-sm-8 text-right">
-         <h2><a href="{% url 'blog.views.about' %}">About</a></h2>
-         <h2><a href="{% url 'blog.views.contact' %}">Contact</a></h2>
-
-       </nav>
-     </div>
-    </header>
-
-
-   <div class="content container">
+    <div id="container">
+      <header id="header" class="container">
+        {% if user.is_authenticated %}
+        <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+        <p class="top-menu">Hello {{ user.username }}<small>:<a href="{% url 'logout' %}">Log out</a></small></p>
+        {% else %}
+        <a href="{ url 'login' %}" class = "top-menu"><span class = "glyphicon glyphocon-lock"></span></a>
+        {% endif %}
         <div class="row">
-            <div class="col-md-8">
-            {% block content %}
-            {% endblock %}
-            </div>
+        <h1 class="col-md-4 col-sm-4 col-xs-12"><a href="{% url 'blog.views.post_list' %}">Lexi Learns</a></h1>
+        <nav class="col-md-8 col-sm-8 col-xs-12">
+           <h2><a href="{% url 'blog.views.about' %}">About</a></h2>
+           <h2><a href="{% url 'blog.views.contact' %}">Contact</a></h2>
+        </nav>
         </div>
+      </header>
+
+      <div class="container" id="content">
+          <div class="row">
+              <div class="col-md-8 col-sm-8 col-xs-12">
+              {% block content %}
+              {% endblock %}
+              </div>
+          </div>
+      </div>
+
+      <div id="footer">
+        <div id="social">
+          <a href="mailto:hello@lexilearns.com?subject=Hello20%from20%the20%Blog"><i class="fa fa-envelope fa-lg"></i></a>
+          <a href="http://twitter.com/AlexisMFitz" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+          <a href="http://github.com/amfitz" target="_blank"><i class="fa fa-github fa-lg"></i></a>
+          <a href="http://www.linkedin.com/in/alexisfitzpatrick" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
+          <a href="http://www.pinterest.com/lexilui/" target="_blank"><i class="fa fa-pinterest fa-lg"></i></a>
+        </div>
+      </div>
     </div>
-
-<footer class="container">
-  <div class="row">
-    <p class="col-sm-4">&copy LexiLearns</p>
-      <nav class="col-sm-8 text-right">
-        <p><a href="mailto:hello@lexilearns.com?subject=Hello20%from20%the20%Blog"><i class="fa fa-envelope fa-lg"></i></a></p>
-        <p><a href="http://twitter.com/AlexisMFitz" target="_blank"><i class="fa fa-twitter fa-lg"></i></a></p>
-        <p><a href="http://github.com/amfitz" target="_blank"><i class="fa fa-github fa-lg"></i></a></p>
-        <p><a href="http://www.linkedin.com/in/alexisfitzpatrick" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a></p>
-        <p><a href="http://www.pinterest.com/lexilui/" target="_blank"><i class="fa fa-pinterest fa-lg"></i></a></p>
-      
-      </nav>
-  </div>
-</footer>
-
-
   </body>
 </html>
