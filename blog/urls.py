@@ -15,6 +15,7 @@ urlpatterns = [
     url(r'^comment/(?P<pk>\d+)/remove/$', views.comment_remove, name='comment_remove'),
     url(r'^about', views.about, name="about"),
     url(r'^contact', views.contact, name="contact"),
+    url(r'^resume', views.resume, name="resume"),
 
 
 ]
