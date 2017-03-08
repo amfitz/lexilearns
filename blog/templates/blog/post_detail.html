@@ -18,7 +18,8 @@
           <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
           {% endif %}
           <h1>{{ post.title }}</a></h1>
-          <p>{{ post.text|linebreaks }}</p>
+          <p>{{ post.text|safe|linebreaks }}</p>
+
       </div>
 
       <hr>

@@ -11,7 +11,10 @@ def contact(request):
     return render(request, 'blog/contact.html')
 
 def resume(request):
-    return render(request, 'blog/resume.html')    
+    return render(request, 'blog/resume.html')
+
+def resources(request):
+    return render(request, 'blog/resources.html')
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
