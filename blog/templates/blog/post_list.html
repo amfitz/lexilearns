@@ -12,7 +12,7 @@
           </div>
 
 
-          <p>{{ post.text|safe|linebreaks }}</p>
+          <p>{{ post.text|safe|linebreaksbr }}</p>
 
 
 
@@ -21,7 +21,7 @@
               <i class="fa fa-comment fa-stack-2x"></i>
               <strong class="fa-stack-1x fa-stack-text fa-inverse">{{ post.approved_comments.count }}</strong>
             </span>
-              Comments</a>
+              Comment{{ post.approved_comments.count|pluralize }}</a>
 
       </div>
   {% endfor %}

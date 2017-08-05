@@ -20,9 +20,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '=cci^bu0!$ym*_61bpdy2v069(g0=%vn#%=ub(*g1y8ah#64g3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.lexilearns.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
