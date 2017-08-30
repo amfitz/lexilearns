@@ -17,6 +17,7 @@ urlpatterns = [
     url(r'^contact', views.contact, name="contact"),
     url(r'^resume', views.resume, name="resume"),
     url(r'^resources', views.resources, name="resources"),
+    url(r'^home', views.home, name="home"),
 
 
 

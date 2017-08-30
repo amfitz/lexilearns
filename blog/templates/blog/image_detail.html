@@ -1,0 +1,25 @@
+
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+
+<!--Replace with Image Details
+date posted
+short description
+list of posts used in
+-->
+      <div class="image">
+          {% if user.is_authenticated %}
+            <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class = "fa fa-edit"></span></a>
+            <a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}"><span class="fa fa-trash"></span></a>
+          {% else %}
+          <a href="{% url 'login' %}" class="top-menu"><span class="fa fa-lock"></span></a>
+          {% endif %}
+          <h1>{{ image.title }}</a></h1>
+          <p>{{ image.text|linebreaks }}</p>
+
+      </div>
+
+
+{% endblock %}

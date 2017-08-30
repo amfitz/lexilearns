@@ -9,6 +9,7 @@ body{
     /*padding-top: 70px; */
 }
 
+
 body > .container {
   padding: 100px 15px 0;
 }
@@ -29,47 +30,29 @@ a, a:active, a:visited {
   color: #C390D4;
 }
 
-.navbar .container{
-
-  background-color: #C390D4;
-  color: #ffffff;
-  font-family: 'Kaushan Script', cursive;
-}
-
-.navbar .container a, .navbar .container ul li a{
-  color: #ffffff;
-  text-decoration: none;
-}
-
 
 .content {
   margin-left: 40px;
   padding-bottom: 40px;
 }
 
-h1, h2, h3, h4 {
-  font-family: 'Kaushan Script', cursive;
-}
 
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 40px;
+  height: 60px;
   padding-top: 5px;
   background-color: #C390D4;
-}
-
-.footer > .container {
-  align-content: center;
-  position: absolute;
-  text-align: center;
 }
 
 .footer a{
   text-decoration: none;
   color: #ffffff;
+}
+
+.middle-test {
+  margin-left: 500p;
 }
 
 .date {

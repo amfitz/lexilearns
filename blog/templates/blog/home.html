@@ -1,0 +1,40 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+About - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+
+<div id="summary">
+  
+</div>
+
+<div id="about">
+
+<h1>About Me</h1>
+<p>Hi! I'm Alexis Fitzpatrick. I started to learn to code about a year ago and this website is my first published website entirely coded by myself. I have a wordpress blog that I'll eventually relaunch on my own.</p><br>
+<p>My bachelor's degree is in Mechanical Engineering and I've been working in Aerospace, specializing in Composite Materials and Processes, for 9 years now. I love it and expect to keep doing what I'm doing for a very long time. But on the side, I'm very crafty and love to learn new things. I knit, sew, do hardanger, make jewelry, do papercrafts and now I'm coding, which is just as creative, if not more so.</p><br>
+<p>I started to learn programming with a desire to better manage my test data and was directed toward Python. I learned the basics and went to my first PyCon in Portland in 2016 and there I met up with Django and turned my interest to web development. I didn't get to attend the DjangoGirls event there, but I ran through their tutorial on my own to start this site and I'm continuing my eduction with HTML, CSS, Python, and Django using online resources and local and remote meetups.</p><br>
+<p> This year I'm volunteering to help organise DjangoCon in Spokane, my current home city! I'm proud to have been the the one to notice the call for proposals and I got a local tech group to propose Spokane as their location and we got it! I hope all the DjangoCon atendees love Spokane as much as I do!</p><br>
+<p>In what little free time I have between work, crafting, reading, volunteering and learning to code, I run! I'm also getting into triathalons. I finished my first sprint tri last summer and joined two tri teams this year and have already registered for three triathalons this year.</p><br>
+
+
+</div>
+
+
+<div id="skills">
+{% for skill in skills %}
+    <div class="skills">
+
+        <p class="title">created: {{ post.created_date|date:'d-m-Y' }}</p>
+        <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+        <p>{{ post.text|truncatechars:200 }}</p>
+    </div>
+{% endfor %}
+</div>
+
+<div id="contact">
+</div>
+
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+  {% for image in images %}
+
+  <!--thumbnails with url link, similar to instagram layout-->
+  
+      <div class="image">
+
+
+
+          <h1><a href="{% url 'image_detail' pk=image.pk %}">{{ image.title }}</a></h1>
+          <div class="date">
+              {{ post.published_date }}
+          </div>
+
+
+          <p>{{ image.text|linebreaksbr }}</p>
+
+
+          <a href="{% url 'image_detail' pk=post.pk %}">
+
+
+      </div>
+  {% endfor %}
+{% endblock content %}

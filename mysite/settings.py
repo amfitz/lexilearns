@@ -9,6 +9,11 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 
 import os
 
+from django.core.exceptions import ImproperlyConfigured
+
+
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -23,6 +28,8 @@ SECRET_KEY = '=cci^bu0!$ym*_61bpdy2v069(g0=%vn#%=ub(*g1y8ah#64g3'
 DEBUG = False
 
 ALLOWED_HOSTS = ['.lexilearns.com', 'localhost', '127.0.0.1']
+
+#SECURE_SSL_REDIRECT = False
 
 
 # Application definition
@@ -47,6 +54,7 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'mysite.urls'
 
@@ -117,8 +125,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
 
 LOGIN_REDIRECT_URL = '/'
