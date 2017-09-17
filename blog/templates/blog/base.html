@@ -8,25 +8,21 @@
     <title>Lexi Learns</title>
 
     <!-- Bootstrap CDN version 4.0 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC|Coming+Soon|Cookie|Dancing+Script|Great+Vibes|Indie+Flower|Kaushan+Script|Lato|Yellowtail" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <!-- My custom CSS -->
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC|Coming+Soon|Cookie|Dancing+Script|Great+Vibes|Indie+Flower|Kaushan+Script|Lobster+Two|Lato|Yellowtail">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
   </head>
 
   <body>
     <!-- Fixed collabsilble navbar with toggle on right-->
-    <nav class="nav navbar fixed-top navbar-toggleable-sm navbar-inverse" style="background-color: #C390D4;">
+    <nav class="nav navbar navbar-expand-md fixed-top navbar-dark" style="background-color: #ae76c1;">
+      <a class="navbar-brand" href="{% url 'post_list' %}"><h1>Lexi Learns</h1></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
         <span class="fa fa-bars" aria-hidden="true"></span>
       </button>
-
-      <a class="navbar-brand" href="{% url 'post_list' %}"><h1>Lexi Learns</h1></a>
-
       <div  class="collapse navbar-collapse justify-content-end" id="navbarToggler">
         <ul class="navbar-nav mr-0">
           <li class="nav-item"><a class="nav-link" href="{% url 'about' %}"><h3>About</h3></a></li>
@@ -65,7 +61,7 @@
     </div>
 
     <footer class="footer">
-      <div class="d-flex justify-content-center">
+      <div class="d-flex justify-content-center align-items-center">
 
         <p>
           <a href="mailto:hello@lexilearns.com?subject=Hello20%from20%the20%Blog"><i class="fa fa-envelope fa-2x"> </i> </a>
@@ -79,7 +75,13 @@
     </footer>
 
 
+
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
   </body>
 </html>
