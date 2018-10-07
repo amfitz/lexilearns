@@ -6,12 +6,10 @@ https://docs.djangoproject.com/en/1.9/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.9/ref/settings/
 """
-
+"""
+Upgraded to 1.10 10/5/2018
+"""
 import os
-
-from django.core.exceptions import ImproperlyConfigured
-
-
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -28,12 +26,13 @@ with open(os.path.join(BASE_DIR, 'mysite/secrets.txt')) as f:
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.lexilearns.com', 'localhost', '127.0.0.1']
 
 #SECURE_SSL_REDIRECT = False
 
+ADMIN = [('Alexis', 'alexis.m.fitz@gmail.com')]
 
 # Application definition
 
@@ -129,5 +128,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# https
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+
+
+
 
 LOGIN_REDIRECT_URL = '/'
